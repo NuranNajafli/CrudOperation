@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.main{
+    margin: auto;
+    width:70%;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th, td{
+    padding: 10px;
+    border: 1px solid black;
+}
+#add{
+    display: inline-block;
+    padding: 5px 10px ;
+    background-color: blue;
+    color: white;
+    border-radius: 5px !important;
+}
+input{
+    padding: 5px 10px;
+}
+.cancel{
+    background-color: red;
+    display: inline-block;
+    padding: 5px 10px ;
+    border-radius: 5px !important;
+    color: white;
+    margin-left: 10px;
+
+}
+.save{
+    background-color: green;
+    display: inline-block;
+    padding: 5px 10px ;
+    border-radius: 5px !important;
+    color: white;
+    margin-left: 10px;
+}
+.edit{
+    background-color:rgb(255, 115, 0);
+    display: inline-block;
+    padding: 5px 10px ;
+    border-radius: 5px !important;
+    color: white;
+    margin-left: 10px;
+}
+.error{
+    border: 1px solid red !important;
+}
