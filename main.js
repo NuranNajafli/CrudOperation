@@ -2,6 +2,14 @@ let tbody = document.getElementById("tbody")
 let add = document.getElementById("add")
 let boolen = true;
 
+const allowNumbers = (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+  };
+  
+  const allowLetter = (e) => {
+    e.target.value = e.target.value.replace(/[^a-z\s]/gi, "");
+  };
+
 
 add.addEventListener("click", () => {
     if (boolen) {
@@ -12,15 +20,18 @@ add.addEventListener("click", () => {
         let nameInput = document.createElement("input")
         nameInput.setAttribute("type", "text")
         nameInput.setAttribute("placeholder", "Write Nour Name")
+        nameInput.addEventListener("input", allowLetter)
         nameTd.append(nameInput)
         let surnameTd = document.createElement("td")
         let surnameInput = document.createElement("input")
+        surnameInput.addEventListener("input", allowLetter)
         surnameInput.setAttribute("type", "text")
         surnameInput.setAttribute("placeholder", "Write Nour Surname")
         surnameTd.append(surnameInput)
 
         let salaryTd = document.createElement("td")
         let salaryInput = document.createElement("input")
+        salaryInput.addEventListener("input", allowNumbers)
         salaryInput.setAttribute("type", "number")
         salaryInput.setAttribute("placeholder", "Amount of Salary")
         salaryTd.append(salaryInput)
